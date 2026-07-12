@@ -1,0 +1,215 @@
+/* ============================================
+   RESPONSIVE — Institut Alhazen
+   Mobile ≤ 768px | Tablet 769–1024px
+   All overrides use !important to beat inline styles
+   ============================================ */
+
+/* --- Burger button (hidden on desktop) --- */
+.mob-burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  background: #FBFAF6;
+  border: 1.5px solid #20271E;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* --- Mobile menu overlay --- */
+.mob-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #FBFAF6;
+  z-index: 200;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.mob-menu.open { display: flex; }
+.mob-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1.5px solid #20271E;
+}
+.mob-menu-close {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  background: #FBFAF6;
+  border: 1.5px solid #20271E;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #20271E;
+}
+.mob-menu-links {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  gap: 4px;
+  flex: 1;
+}
+.mob-menu-link {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #20271E;
+  text-decoration: none;
+  padding: 13px 14px;
+  border-radius: 8px;
+}
+.mob-menu-link:hover { background: #F1F5EE; }
+.mob-menu-sublabel {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #9AA394;
+  padding: 14px 14px 6px;
+}
+.mob-menu-footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1.5px solid #20271E;
+}
+.mob-menu-rdv {
+  display: block;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #20271E;
+  background: #FFD43B;
+  border: 1.5px solid #20271E;
+  border-radius: 8px;
+  padding: 14px;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 rgba(32,39,30,.75);
+}
+.mob-menu-wa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: #25D366;
+  border: 1.5px solid #20271E;
+  border-radius: 8px;
+  padding: 14px;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 rgba(32,39,30,.75);
+}
+
+/* ============================================
+   TABLET (769px – 1024px)
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .rsp-h1     { font-size: 44px !important; }
+  .rsp-h2     { font-size: 30px !important; }
+  .rsp-blockquote { font-size: 30px !important; }
+
+  .rsp-grid-4 { grid-template-columns: 1fr 1fr !important; }
+  .rsp-grid-3 { grid-template-columns: 1fr 1fr !important; }
+  .rsp-grid-2 { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .rsp-grid-footer { grid-template-columns: 1fr 1fr !important; gap: 28px !important; }
+
+  .rsp-hero-section { padding-left: 24px !important; padding-right: 24px !important; }
+
+  .rsp-formations-grid { grid-template-columns: 1fr !important; }
+  .rsp-methode-steps   { grid-template-columns: 1fr 1fr !important; }
+}
+
+/* ============================================
+   MOBILE (≤ 768px)
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* --- Nav --- */
+  .rsp-nav         { display: none !important; }
+  .rsp-nav-actions { display: none !important; }
+  .mob-burger      { display: flex !important; }
+
+  /* Header inner padding */
+  header { padding: 10px 14px !important; }
+  div[style*="padding:14px 24px"] { padding: 10px 14px !important; }
+
+  /* --- Headings --- */
+  .rsp-h1         { font-size: 34px !important; line-height: 1.1 !important; }
+  .rsp-h2         { font-size: 26px !important; line-height: 1.15 !important; }
+  .rsp-blockquote { font-size: 24px !important; line-height: 1.25 !important; }
+  .rsp-stat-num   { font-size: 52px !important; }
+
+  /* --- Section paddings --- */
+  .rsp-hero-section { padding-top: 120px !important; padding-left: 20px !important; padding-right: 20px !important; }
+  section { padding-left: 20px !important; padding-right: 20px !important; }
+
+  /* --- Grids → single column --- */
+  .rsp-grid-4 { grid-template-columns: 1fr 1fr !important; }
+  .rsp-grid-3 { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .rsp-grid-2 { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .rsp-grid-footer { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+
+  /* Stats bandeau 4-col → 2×2 */
+  .rsp-stats-bandeau { grid-template-columns: 1fr 1fr !important; }
+  .rsp-stats-bandeau > div { border-right: none !important; border-bottom: 1px solid #E4E2D8; }
+
+  /* --- Formations widget --- */
+  .rsp-formations-grid { grid-template-columns: 1fr !important; }
+
+  /* --- Méthode stepper 4-col → 2×2 --- */
+  .rsp-methode-steps { grid-template-columns: 1fr 1fr !important; }
+
+  /* --- Matières table → scroll --- */
+  .rsp-matieres-wrap { overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+  .rsp-matieres-wrap > div { min-width: 480px !important; }
+
+  /* --- Hero CTA buttons → stack --- */
+  .rsp-hero-cta {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .rsp-hero-cta a {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* --- Notre Histoire sticky panel → relative --- */
+  .rsp-sticky-panel { position: relative !important; top: auto !important; }
+
+  /* --- Equipe hero split --- */
+  .rsp-hero-split-reverse > div:first-child { order: 2 !important; }
+  .rsp-hero-split-reverse > div:last-child  { order: 1 !important; }
+
+  /* --- Footer --- */
+  .rsp-grid-footer > div:not(:first-child) { border-top: 1px solid #E4E2D8; padding-top: 20px; }
+  .rsp-footer-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+
+  /* --- Pédagogie results numbers --- */
+  .rsp-results-row { flex-direction: column !important; align-items: flex-start !important; gap: 24px !important; }
+
+  /* --- Contact phone/email 2-col → 1-col --- */
+  .rsp-grid-2-sm { grid-template-columns: 1fr !important; }
+
+  /* --- Map height --- */
+  .rsp-map { height: 300px !important; }
+}
+
+/* ============================================
+   SMALL MOBILE (≤ 400px)
+   ============================================ */
+@media (max-width: 400px) {
+  .rsp-h1     { font-size: 28px !important; }
+  .rsp-grid-4 { grid-template-columns: 1fr !important; }
+  .rsp-stats-bandeau { grid-template-columns: 1fr !important; }
+  .rsp-grid-footer { grid-template-columns: 1fr !important; }
+  .rsp-methode-steps { grid-template-columns: 1fr !important; }
+}
