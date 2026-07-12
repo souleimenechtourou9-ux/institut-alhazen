@@ -195,8 +195,17 @@
   .rsp-methode-steps { grid-template-columns: 1fr 1fr !important; }
 
   /* --- Matières table → scroll --- */
-  .rsp-matieres-wrap { overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+  .rsp-matieres-wrap {
+    overflow: visible !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
   .rsp-matieres-wrap > div { min-width: 480px !important; }
+  .rsp-matieres-row { min-width: 480px !important; }
+
+  /* --- Formation interactive matières widget → collapse to column --- */
+  div:has(> #matieresMenu) { flex-direction: column !important; gap: 12px !important; }
+  #matieresMenu { width: 100% !important; flex: none !important; }
 
   /* --- Hero CTA buttons → stack fullwidth --- */
   .rsp-hero-cta {
@@ -230,6 +239,29 @@
     white-space: normal !important;
     width: 100% !important;
     box-sizing: border-box !important;
+  }
+  footer > div[style*="background:#FFD43B"] h2 {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+
+  /* --- École link rows (140px 1fr auto) → stack --- */
+  .rsp-link-row {
+    grid-template-columns: 60px 1fr auto !important;
+    gap: 12px !important;
+    padding: 18px 16px !important;
+  }
+
+  /* --- Nos valeurs / 2-col cards already handled by rsp-grid-2 above --- */
+
+  /* --- Formation matières table rows → horizontal scroll --- */
+  .rsp-matieres-row { min-width: 480px !important; }
+
+  /* --- Large decorative numbers (01, 02…) — reduce on mobile --- */
+  span[style*="font-size:64px"], span[style*="font-size:56px"],
+  span[style*="font-size:46px"] {
+    font-size: 32px !important;
   }
 
   /* --- Notre Histoire sticky panel → relative --- */
