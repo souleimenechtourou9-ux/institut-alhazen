@@ -298,6 +298,53 @@
 
   /* --- Map height --- */
   .rsp-map { height: 300px !important; }
+
+  /* ---- PAGE-SPECIFIC (synced from Claude Design) ---- */
+
+  /* École — hero & hub */
+  .ecole-hero-section { padding-top: 115px !important; padding-left: 16px !important; padding-right: 16px !important; padding-bottom: 56px !important; }
+  .ecole-hub-section  { padding: 56px 16px 72px !important; }
+  .ecole-hub-cta      { display: none !important; }
+
+  /* Contact/FAQ — hero override (115px clears sticky header) */
+  .page-hero { padding-top: 115px !important; padding-left: 16px !important; padding-right: 16px !important; padding-bottom: 48px !important; }
+  .hero-h1   { font-size: 34px !important; }
+  .hero-p    { font-size: 16px !important; }
+
+  /* Contact — form & map */
+  .contact-section { padding: 40px 16px 60px !important; }
+  .contact-grid    { grid-template-columns: 1fr !important; }
+  .form-pad        { padding: 28px 20px !important; }
+  .loc-section     { padding: 0 16px 60px !important; }
+  .map-bar         { grid-template-columns: 1fr !important; }
+
+  /* FAQ */
+  .faq-section { padding: 48px 16px 72px !important; }
+
+  /* Formations — hero & niveau list */
+  .form-hero-section   { padding-top: 115px !important; padding-left: 16px !important; padding-right: 16px !important; padding-bottom: 48px !important; }
+  .form-niveaux-section { padding: 56px 16px 72px !important; }
+  .form-niveau-row     { grid-template-columns: 64px 1fr !important; gap: 12px !important; padding: 20px 16px !important; }
+  .form-niveau-tagline { display: none !important; }
+  .form-niveau-cta     { display: none !important; }
+
+  /* Nos Valeurs */
+  .val-hero-section    { padding: 64px 16px 56px !important; }
+  .val-grille-section  { padding: 56px 16px 72px !important; }
+
+  /* Notre Équipe */
+  .equipe-hero-section  { padding: 52px 16px 56px !important; }
+  .equipe-hero-illu     { display: none !important; }
+  .equipe-grille-section { padding: 56px 16px 72px !important; }
+
+  /* Notre Histoire */
+  .hist-hero-section  { padding: 52px 16px 56px !important; }
+  .hist-hero-illu     { display: none !important; }
+  .hist-story-grid    { gap: 0 !important; }
+  .hist-chapter       { min-height: auto !important; padding: 36px 0 !important; }
+  .hist-chapter h2    { font-size: 26px !important; }
+  .hist-chapter p     { font-size: 16px !important; }
+  .hist-section       { padding-left: 16px !important; padding-right: 16px !important; padding-top: 0 !important; }
 }
 
 /* ============================================
