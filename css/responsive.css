@@ -264,6 +264,25 @@
     font-size: 32px !important;
   }
 
+  /* --- Formations menu → horizontal scroll (from design) --- */
+  .rsp-form-menu {
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    gap: 8px !important;
+    padding-bottom: 8px !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none !important;
+  }
+  .rsp-form-menu::-webkit-scrollbar { display: none; }
+  .rsp-form-menu > * {
+    flex: none !important;
+    min-width: 130px !important;
+    padding: 10px 12px !important;
+  }
+
+  /* --- Footer brand → pleine largeur (from design) --- */
+  .rsp-footer-brand { grid-column: 1 / -1 !important; }
+
   /* --- Notre Histoire sticky panel → relative --- */
   .rsp-sticky-panel { position: relative !important; top: auto !important; }
 
